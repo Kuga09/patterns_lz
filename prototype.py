@@ -19,18 +19,3 @@ class Car:
     
     def __str__(self):
         return f"{self.make} {self.model}, мощность {self.engine.horsepower} л.с., мотор {self.engine.fuel_type}"
-
-# Создание исходного объекта
-original_car = Car("Toyota","Corolla",Engine(132,"Бензин"))
-
-# Клонирование объекта
-cloned_car = original_car.clone()
-
-# Изменение данных в клонированном объекте 
-cloned_car.make = "Honda"
-cloned_car.model = "Civic"
-cloned_car.engine.horsepower = 158
-cloned_car.engine.fuel_type = "Дизель"
-
-print(original_car)
-print(cloned_car)
